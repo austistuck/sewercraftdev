@@ -17,14 +17,14 @@ scene.add(directional);
 const textureLoader = new THREE.TextureLoader();
 const terrainTexture = textureLoader.load('./tex/grass.png');
 const terrain = new THREE.Mesh(
-    perlin(1000, 1000, 130), // much larger terrain, smoother hills
+    perlin(1000, 1000, 130),
     new THREE.MeshStandardMaterial({ map: terrainTexture })
     
 );
 
 terrainTexture.wrapS = THREE.RepeatWrapping;
 terrainTexture.wrapT = THREE.RepeatWrapping;
-terrainTexture.repeat.set(20, 20); // Adjust numbers for tiling
+terrainTexture.repeat.set(20, 20);
 
 terrain.position.y = -2;
 scene.add(terrain);
